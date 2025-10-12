@@ -23,13 +23,17 @@ public class Booking {
 	@BeforeTest
 	public void setup()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ARJUN\\Desktop\\TestYantra\\selenium1\\src\\main\\chrome\\chromedriver.exe");
+        try {
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\ARJUN\\Desktop\\TestYantra\\selenium1\\src\\main\\chrome\\chromedriver.exe");
 
 
-		driver=new ChromeDriver();
+            driver = new ChromeDriver();
 
-		driver.manage().window().maximize();
-		driver.get("https://www.cleartrip.com/flights");
+            driver.manage().window().maximize();
+            driver.get("https://www.cleartrip.com/flights");
+        }catch(Exception e){
+
+        }
 	}
 
 	@Test
